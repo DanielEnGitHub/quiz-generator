@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cuál es la capital de Guatemala?",
+    "answers": ["Quetzaltenango", "Antigua Guatemala", "Ciudad de Guatemala"],
+    "correctAnswer": 3
+  },
+  {
+    "id": 2,
+    "question": "¿Qué moneda se utiliza en Guatemala?",
+    "answers": ["Peso guatemalteco", "Quetzal", "Colón"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 3,
+    "question": "¿En qué continente se encuentra Guatemala?",
+    "answers": ["América del Norte", "América del Sur", "América Central"],
+    "correctAnswer": 3
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es el volcán más alto de Guatemala?",
+    "answers": ["Volcán Tajumulco", "Volcán de Agua", "Volcán Pacaya"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "question": "¿Cuál es el plato típico más conocido de Guatemala?",
+    "answers": ["Tamales", "Pepián", "Pupusas"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "question": "¿Qué idioma se habla mayoritariamente en Guatemala?",
+    "answers": ["Español", "Inglés", "K'iche'"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál es el lago más grande de Guatemala?",
+    "answers": ["Lago de Atitlán", "Lago Petén Itzá", "Lago Izabal"],
+    "correctAnswer": 3
+  },
+  {
+    "id": 8,
+    "question": "¿Cuál es la flor nacional de Guatemala?",
+    "answers": ["Rosa", "Orquídea", "Girasol"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 9,
+    "question": "¿Qué famosa ruina maya se encuentra en Guatemala?",
+    "answers": ["Tikal", "Chichén Itzá", "Copán"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 10,
+    "question": "¿Cuál es la festividad más importante de Guatemala?",
+    "answers": ["Semana Santa", "Navidad", "Independencia"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 11,
+    "question": "¿Qué significa el nombre 'Guatemala'?",
+    "answers": [
+      "Tierra de muchos árboles",
+      "Tierra de eternas primaveras",
+      "Tierra de volcanes"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 12,
+    "question": "¿Cuál es el equipo de fútbol más popular de Guatemala?",
+    "answers": ["CSD Municipal", "Comunicaciones FC", "Antigua GFC"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 13,
+    "question": "¿Qué es el kak'ik?",
+    "answers": [
+      "Bebida alcohólica tradicional",
+      "Plato típico",
+      "Danza folclórica"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 14,
+    "question": "¿Cuál es el nombre oficial de Guatemala?",
+    "answers": [
+      "República de Guatemala",
+      "Estados Unidos de Guatemala",
+      "República de Centroamérica"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 15,
+    "question": "¿Cuál es la montaña más alta de Guatemala?",
+    "answers": ["Volcán Acatenango", "Volcán de Fuego", "Volcán Tajumulco"],
+    "correctAnswer": 3
+  },
+  {
+    "id": 16,
+    "question": "¿Qué significa 'quetzal', la moneda de Guatemala?",
+    "answers": ["Pájaro", "Flor", "Árbol"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 17,
+    "question": "¿Cuál es el plato típico más consumido en Guatemala durante el desayuno?",
+    "answers": [
+      "Chiles rellenos",
+      "Tamalitos de chipilín",
+      "Tortillas con frijoles"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 18,
+    "question": "¿En qué año se fundó la ciudad de Antigua Guatemala?",
+    "answers": ["1524", "1543", "1561"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 19,
+    "question": "¿Cuál es el nombre de la moneda de Guatemala antes del quetzal?",
+    "answers": ["Peso guatemalteco", "Colón", "Dólar"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 20,
+    "question": "¿Cuál es la bebida alcohólica más popular de Guatemala?",
+    "answers": ["Ron", "Cerveza", "Licor de café"],
+    "correctAnswer": 1
+  }
+]
