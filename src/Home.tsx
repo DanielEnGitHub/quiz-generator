@@ -1,8 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { SubTitleComponent, TitleComponent } from "./components/Text";
 import Menu from "./Menu";
+import { useQuestionsStore } from "./store/questions";
+import Game from "./Game";
 
 const Home = () => {
+  const questions = useQuestionsStore((state) => state.questions);
   return (
     <Box
       position={"relative"}
@@ -26,7 +29,7 @@ const Home = () => {
         >
           <TitleComponent content="QUIZ" fontWeight="bold" />
           <SubTitleComponent content="GENERATOR" fontWeight="bold" />
-          <Menu />
+          {questions.length > 0 ? <Game /> : <Menu />}
         </Flex>
       </Flex>
     </Box>
