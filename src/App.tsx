@@ -1,11 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import Start from "./Start";
+
+import Home from "./Home";
 
 function App() {
   return (
     <ChakraProvider>
-      <h1>Quiz Generator</h1>
-      <Start />
+      <Home />
     </ChakraProvider>
   );
 }
