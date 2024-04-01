@@ -11,4 +11,5 @@ export interface IState {
   questions: IQuestions[];
   currentQuestionIndex: number;
   fetchQuestions: (limit: number) => Promise<void>;
+  selectAnswer: (questionId: number, answerIndex: number) => void;
 }
