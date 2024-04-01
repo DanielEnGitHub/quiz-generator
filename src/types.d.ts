@@ -12,4 +12,6 @@ export interface IState {
   currentQuestionIndex: number;
   fetchQuestions: (limit: number) => Promise<void>;
   selectAnswer: (questionId: number, answerIndex: number) => void;
+  goToNextQuestion: () => void;
+  goToPreviousQuestion: () => void;
 }

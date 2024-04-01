@@ -1,7 +1,8 @@
-import { List, ListItem, Stack } from "@chakra-ui/react";
+import { List, ListItem, Stack, Text } from "@chakra-ui/react";
 import { ContentComponent } from "./components/Text";
 import { useQuestionsStore } from "./store/questions";
 import { IQuestions } from "./types";
+import ButtonNextPrev from "./components/Buttons/ButtonNextPrev";
 
 const CardQuestion = ({ questionInfo }: { questionInfo: IQuestions }) => {
   const selectAnswer = useQuestionsStore((state) => state.selectAnswer);
@@ -41,7 +42,11 @@ const CardQuestion = ({ questionInfo }: { questionInfo: IQuestions }) => {
 
   return (
     <Stack maxW={{ base: "400px", lg: "550px" }}>
-      <ContentComponent content={questionInfo.question} textAlign="center" />
+      <ContentComponent
+        content={questionInfo.question}
+        textAlign="center"
+        height={{ base: "60px", lg: "100px" }}
+      />
       <List mt={4}>
         {questionInfo.answers.map((answer, index) => (
           <ListItem
@@ -83,9 +88,40 @@ const Game = () => {
   );
   const questionInfo = questions[currentQuestionIndex];
 
+  // cambiar de pregunta
+  const goToNextQuestion = useQuestionsStore((state) => state.goToNextQuestion);
+  const goToPreviousQuestion = useQuestionsStore(
+    (state) => state.goToPreviousQuestion
+  );
+
   return (
-    <Stack>
+    <Stack mt={3}>
+      <Stack w={{ base: "250px", lg: "460px" }} mx="auto">
+        {/* pregunta indes */}
+        <Text textAlign="center" fontSize="20px">
+          {`${currentQuestionIndex + 1} / ${questions.length}`}
+        </Text>
+      </Stack>
       <CardQuestion questionInfo={questionInfo} />
+      <Stack
+        direction="row"
+        justify={currentQuestionIndex === 0 ? "flex-end" : "space-between"}
+        mt={5}
+        w={{ base: "250px", lg: "460px" }}
+        mx="auto"
+      >
+        <ButtonNextPrev
+          onClick={goToPreviousQuestion}
+          display={currentQuestionIndex === 0 ? "none" : "block"}
+          isPrev
+        />
+        <ButtonNextPrev
+          onClick={goToNextQuestion}
+          display={
+            currentQuestionIndex === questions.length - 1 ? "none" : "block"
+          }
+        />
+      </Stack>
     </Stack>
   );
 };

@@ -48,5 +48,20 @@ export const useQuestionsStore = create<IState>((set, get) => {
       // actualizamos el estado
       set({ questions: newQuestions });
     },
+
+    goToNextQuestion: () => {
+      const { currentQuestionIndex, questions } = get();
+
+      if (currentQuestionIndex < questions.length - 1) {
+        set({ currentQuestionIndex: currentQuestionIndex + 1 });
+      }
+    },
+    goToPreviousQuestion: () => {
+      const { currentQuestionIndex } = get();
+
+      if (currentQuestionIndex > 0) {
+        set({ currentQuestionIndex: currentQuestionIndex - 1 });
+      }
+    },
   };
 });
