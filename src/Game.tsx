@@ -94,6 +94,30 @@ const Game = () => {
     (state) => state.goToPreviousQuestion
   );
 
+  const reset = useQuestionsStore((state) => state.reset);
+  const setScore = useQuestionsStore((state) => state.setScore);
+
+  let correct = 0;
+  let incorrect = 0;
+  let unanswered = 0;
+
+  questions.forEach((question) => {
+    if ("userSelectedAnswer" in question) {
+      if (question.isCorrectUserAnswer) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+    } else {
+      unanswered++;
+    }
+  });
+
+  const handleReset = () => {
+    reset();
+    setScore(correct);
+  };
+
   return (
     <Stack mt={3}>
       <Stack w={{ base: "250px", lg: "460px" }} mx="auto">
@@ -122,6 +146,24 @@ const Game = () => {
           }
         />
       </Stack>
+      <Stack w={{ base: "250px", lg: "460px" }} mx="auto" mt={5}>
+        <Text textAlign="center" fontSize="20px">
+          {`Correctas: ${correct} | Incorrectas: ${incorrect} | Sin responder: ${unanswered}`}
+        </Text>
+      </Stack>
+      {unanswered === 0 && (
+        <Stack mx="auto" mt={5} onClick={handleReset}>
+          <Text
+            cursor="pointer"
+            textAlign="center"
+            fontSize="20px"
+            borderBottom="2px solid white"
+            fontWeight="bold"
+          >
+            {`Comenzar de nuevo`}
+          </Text>
+        </Stack>
+      )}
     </Stack>
   );
 };

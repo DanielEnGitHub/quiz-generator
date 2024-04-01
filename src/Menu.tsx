@@ -5,9 +5,10 @@ import { ContentComponent, SubTitleComponent } from "./components/Text";
 
 const Menu = () => {
   const fetchQuestions = useQuestionsStore((state) => state.fetchQuestions);
+  const score = useQuestionsStore((state) => state.score);
 
   const handleClick = () => {
-    fetchQuestions(5);
+    fetchQuestions(10);
   };
 
   return (
@@ -21,8 +22,8 @@ const Menu = () => {
       >
         <ContentComponent content="SCORE" />
         <SubTitleComponent
-          content="10/10"
-          mt={{ base: "-10px", lg: "-20px" }}
+          content={`${score}/10`}
+          mt={{ base: "-8px", lg: "-15px" }}
         />
       </Flex>
       <PlayButton onClick={handleClick} />

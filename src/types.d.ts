@@ -10,8 +10,11 @@ export interface IQuestions {
 export interface IState {
   questions: IQuestions[];
   currentQuestionIndex: number;
+  score: number;
   fetchQuestions: (limit: number) => Promise<void>;
   selectAnswer: (questionId: number, answerIndex: number) => void;
   goToNextQuestion: () => void;
   goToPreviousQuestion: () => void;
+  reset: () => void;
+  setScore: (score: number) => void;
 }
